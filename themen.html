@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <title>Brille: Themen</title>
+    <script>
+        // Array mit den Themen-Fragen
+        const fragen = [
+            "Wie wäre es, etwas zum Thema Diversität und Inklusion zu machen?",
+            "Wie wäre es, das Thema Globalisierung religiöser und ethischer Leitbilder zu behandeln?",
+            "Wie wäre es, die Geschichte der Globalisierung vom Kolonialismus bis zum 'Global Village' zu thematisieren?",
+            "Wie wäre es, den Weg von Waren aus aller Welt – Produktion, Handel und Konsum – zu untersuchen?",
+            "Wie wäre es, das Thema Landwirtschaft und Ernährung aufzugreifen?",
+            "Wie wäre es, globale Unterschiede in Gesundheit und Krankheit zu behandeln?",
+            "Wie wäre es, Bildung im globalen Kontext zu thematisieren?",
+            "Wie wäre es, die Globalisierung von Freizeitaktivitäten zu untersuchen?",
+            "Wie wäre es, Schutz und Nutzung natürlicher Ressourcen sowie Energiegewinnung zum Thema zu machen?",
+            "Wie wäre es, über die Chancen und Gefahren des technologischen Fortschritts zu sprechen?",
+            "Wie wäre es, globale Umweltveränderungen in den Fokus zu rücken?",
+            "Wie wäre es, das Thema Mobilität, Stadtentwicklung und Verkehr zu behandeln?",
+            "Wie wäre es, über die Globalisierung von Wirtschaft und Arbeit zu sprechen?",
+            "Wie wäre es, demografische Strukturen und Entwicklungen zu untersuchen?",
+            "Wie wäre es, über Armut und soziale Sicherheit zu sprechen?",
+            "Wie wäre es, Frieden und Konflikte im globalen Kontext zu behandeln?",
+            "Wie wäre es, das Thema Migration und Integration zu thematisieren?",
+            "Wie wäre es, politische Herrschaft, Demokratie und Menschenrechte zu behandeln?",
+            "Wie wäre es, die Rolle der Entwicklungszusammenarbeit und ihrer Institutionen zu thematisieren?",
+            "Wie wäre es, Global Governance und Weltordnungspolitik zu untersuchen?",
+            "Wie wäre es, globale Kommunikation und ihre Auswirkungen zu thematisieren?"
+        ];
+
+        // Funktion, um eine zufällige Frage zu generieren und anzuzeigen
+        function zeigeNeueFrage() {
+            const zufallsIndex = Math.floor(Math.random() * fragen.length);
+            const frage = fragen[zufallsIndex];
+            document.getElementById("article").innerHTML = `<p>${frage}</p>`;
+        }
+
+        // Event Listener für den Button
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector("button").addEventListener("click", zeigeNeueFrage);
+        });
+    </script>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Brille: Thematische Ideen</h1>
+        <p>Deine Aufgabe ist es, einen möglichen Inhalt / ein Thema zur Entwicklung einer Unterrichtsidee beizusteuern.</p>
+
+        <article id="article">
+            <!-- Hier wird eine zufällige Karte angezeigt -->
+        </article>
+
+        <button>Neue Karte</button>
+    </main>
+
+    <footer class="container">
+        <small>Erstellt für den BNE-Lerntag an der Alice-Salomon Schule in Hannover am 1. Oktober 2024 von 
+            <a href="https://ebildungslabor.de">Nele Hirsch (ebildungslabor)</a> • Lizenz: 
+            <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de">CC0 1.0</a>
+        </small>
+    </footer>
+
+</body>
+
+</html>
