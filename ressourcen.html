@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <title>Brille: Ressourcen</title>
+    <script>
+        // Array mit den Fragen zu Ressourcen
+        const ressourcenFragen = [
+            "Inwieweit könnte es uns helfen, gemeinsam statt isoliert zu lernen und Lösungen zu erarbeiten?",
+            "Inwieweit würde es unterstützen, Lernpotenziale durch eine wachstumsorientierte Haltung zu fördern?",
+            "Inwieweit könnte es nützlich sein, bestehende Ideen weiterzuentwickeln, anstatt das Rad neu zu erfinden?",
+            "Wie könnte es uns helfen, Fehler konstruktiv zu nutzen und daraus zu lernen?",
+            "Wie sehr würde es uns unterstützen, den Austausch und das Lernen in Netzwerken zu fördern?",
+            "Inwieweit könnte es helfen, digitale Erfahrungen der Schüler*innen in das Lernen einzubeziehen?",
+            "Inwieweit würde es unterstützen, Veränderungen offen anzunehmen und aktiv mitzugestalten?",
+            "Inwieweit könnte es nützlich sein, regelmäßige Selbstreflexion zu fördern, um Lernprozesse zu verbessern?",
+            "Wie könnte es uns helfen, bestehende Materialien und Tools effektiv einzusetzen?",
+            "Inwieweit würde es unterstützen, Herausforderungen gemeinsam im Team zu lösen?",
+            "Wie könnte es helfen, die Haltung zu vermitteln, dass Lernen nie aufhört?",
+            "Inwieweit würde es uns unterstützen, Schüler*innen aktiv in Entscheidungsprozesse einzubinden?",
+            "Wie sehr könnte es uns helfen, die Vielfalt in Teams als Stärke zu nutzen?",
+            "Inwieweit könnte es uns unterstützen, Schwierigkeiten als Wachstumschancen zu begreifen?",
+            "Wie sehr könnte es uns helfen, offene und klare Kommunikation zu pflegen?",
+            "Inwieweit würde es unterstützen, kreative Ansätze in den Lernprozess zu integrieren?",
+            "Wie könnte es uns helfen, Freude und Motivation als wichtige Elemente des Lernens zu betonen?"
+        ];
+
+        // Funktion, um eine zufällige Frage zu generieren und anzuzeigen
+        function zeigeNeueRessourcenFrage() {
+            const zufallsIndex = Math.floor(Math.random() * ressourcenFragen.length);
+            const frage = ressourcenFragen[zufallsIndex];
+            document.getElementById("article").innerHTML = `<p>${frage}</p>`;
+        }
+
+        // Event Listener für den Button
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector("button").addEventListener("click", zeigeNeueRessourcenFrage);
+        });
+    </script>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Brille: Ressourcen</h1>
+        <p>Deine Aufgabe ist es, zu überlegen, inwieweit bestimmte Ressourcen genutzt werden könnten, um den Lernprozess zu unterstützen.</p>
+
+        <article id="article">
+            <!-- Hier wird eine zufällige Karte angezeigt -->
+        </article>
+
+        <button>Neue Karte</button>
+    </main>
+
+    <footer class="container">
+        <small>Erstellt für den BNE-Lerntag an der Alice-Salomon Schule in Hannover am 1. Oktober 2024 von 
+            <a href="https://ebildungslabor.de">Nele Hirsch (ebildungslabor)</a> • Lizenz: 
+            <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de">CC0 1.0</a>
+        </small>
+    </footer>
+
+</body>
+
+</html>
