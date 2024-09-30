@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <title>Brille: Gestaltungskompetenz</title>
+    <script>
+        // Array mit den Fragen zu Gestaltungskompetenzen
+        const kompetenzFragen = [
+            "Wie können wir es erreichen, dass Lernende neue Perspektiven (auch im internationalen Kontext) integrieren?",
+            "Wie können wir Lernende darin unterstützen, vorausschauend Entwicklungen zu analysieren und zu beurteilen?",
+            "Wie können Lernende interdisziplinär Erkenntnisse gewinnen und in die Praxis umsetzen?",
+            "Wie können wir Lernenden helfen, Risiken, Gefahren und Unsicherheiten zu erkennen und abzuwägen?",
+            "Wie können wir Lernende dazu befähigen, gemeinsam mit anderen zu planen und zu handeln?",
+            "Wie können Lernende lernen, Zielkonflikte bei der Reflexion über Handlungsstrategien zu berücksichtigen?",
+            "Wie können wir Lernende darin unterstützen, an kollektiven Entscheidungsprozessen teilzunehmen?",
+            "Wie können wir Lernende motivieren, sich selbst und andere dazu zu bringen, aktiv zu werden?",
+            "Wie können Lernende ihre eigenen Leitbilder und die anderer reflektieren?",
+            "Wie können Lernende Vorstellungen von Gerechtigkeit als Entscheidungs- und Handlungsgrundlage nutzen?",
+            "Wie können wir Lernenden helfen, selbständig zu planen und zu handeln?",
+            "Wie können Lernende Empathie für andere entwickeln und zeigen?"
+        ];
+
+        // Funktion, um eine zufällige Frage zu generieren und anzuzeigen
+        function zeigeNeueKompetenzFrage() {
+            const zufallsIndex = Math.floor(Math.random() * kompetenzFragen.length);
+            const frage = kompetenzFragen[zufallsIndex];
+            document.getElementById("article").innerHTML = `<p>${frage}</p>`;
+        }
+
+        // Event Listener für den Button
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector("button").addEventListener("click", zeigeNeueKompetenzFrage);
+        });
+    </script>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Brille: Gestaltungskompetenzen</h1>
+        <p>Deine Aufgabe ist es, eine Frage zu überlegen, wie Lernende im Unterricht bestimmte Gestaltungskompetenzen entwickeln können.</p>
+
+        <article id="article">
+            <!-- Hier wird eine zufällige Karte angezeigt -->
+        </article>
+
+        <button>Neue Karte</button>
+    </main>
+
+    <footer class="container">
+        <small>Erstellt für den BNE-Lerntag an der Alice-Salomon Schule in Hannover am 1. Oktober 2024 von 
+            <a href="https://ebildungslabor.de">Nele Hirsch (ebildungslabor)</a> • Lizenz: 
+            <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de">CC0 1.0</a>
+        </small>
+    </footer>
+
+</body>
+
+</html>
