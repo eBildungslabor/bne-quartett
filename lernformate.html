@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <title>Brille: Lernformate</title>
+    <script>
+        // Array mit den Fragen zu Lernformaten
+        const lernformateFragen = [
+            "Wie wäre es, Freiarbeit zu nutzen, bei der Lernende sich ihre Lernziele selbst setzen und eigenständig lernen?",
+            "Wie wäre es, ein Projektlernen zu gestalten, bei dem die Lernenden gemeinsam ein bestimmtes Ergebnis erarbeiten?",
+            "Wie könnte ein Gruppenpuzzle eingesetzt werden, bei dem Wissen in Expertengruppen erarbeitet und weitergegeben wird?",
+            "Inwieweit könnte ein Barcamp sinnvoll sein, bei dem die Teilnehmenden Inhalte und Workshops selbst gestalten?",
+            "Wie könnte das Flipped Classroom Modell eingesetzt werden, um Lerninhalte zu Hause zu erarbeiten und im Unterricht zu vertiefen?",
+            "Inwieweit könnte Stationenlernen genutzt werden, um Lerninhalte an verschiedenen Stationen zu erarbeiten?",
+            "Wie könnte ein Lernzirkel funktionieren, bei dem Aufgaben an unterschiedlichen Stationen abgearbeitet werden?",
+            "Wie könnte ein Rollenspiel helfen, bei dem die Lernenden in verschiedene Rollen schlüpfen?",
+            "Inwieweit könnte eine Expertinnenrunde sinnvoll sein, bei der Fachleute ihr Wissen mit den Lernenden im Diskurs teilen?",
+            "Wie könnte eine Lerntheke aussehen, bei der Lernende Angebote nach ihrem Interesse und Tempo wählen?",
+            "Wie könnte eine Debatte organisiert werden, bei der Lernende Argumente zu einem Thema austauschen und verteidigen?",
+            "Inwieweit könnte Portfolioarbeit genutzt werden, bei der die Lernenden eigenständig ihre Arbeitsergebnisse sammeln?",
+            "Wie könnte Werkstattunterricht gestaltet werden, bei dem eigenständig an verschiedenen Themenstationen gearbeitet wird?",
+            "Inwieweit könnten Lernpartnerschaften sinnvoll sein, bei denen Lernende sich gegenseitig beim Lernen unterstützen?",
+            "Wie könnte ein Planspiel genutzt werden, bei dem eine simulierte Realität zur Lösung eines Problems eingesetzt wird?",
+            "Wie könnte Peer Learning gefördert werden, bei dem Lernende sich gegenseitig unterrichten?",
+            "Inwieweit könnte Blended Learning (Kombination von Präsenz- und Online-Lernen) im Unterricht integriert werden?",
+            "Wie könnte Wochenplanarbeit genutzt werden, bei der Lerninhalte über eine Woche individuell erarbeitet werden?",
+            "Wie könnte der kreative Prozess des Design Thinking zur Problemlösung in Gruppen verwendet werden?"
+        ];
+
+        // Funktion, um eine zufällige Frage zu generieren und anzuzeigen
+        function zeigeNeueLernformateFrage() {
+            const zufallsIndex = Math.floor(Math.random() * lernformateFragen.length);
+            const frage = lernformateFragen[zufallsIndex];
+            document.getElementById("article").innerHTML = `<p>${frage}</p>`;
+        }
+
+        // Event Listener für den Button
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector("button").addEventListener("click", zeigeNeueLernformateFrage);
+        });
+    </script>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Brille: Lernformate</h1>
+        <p>Deine Aufgabe ist es, verschiedene Ideen für mögliche Lernformate einzubringen, die den Unterricht bereichern können.</p>
+
+        <article id="article">
+            <!-- Hier wird eine zufällige Karte angezeigt -->
+        </article>
+
+        <button>Neue Karte</button>
+    </main>
+
+    <footer class="container">
+        <small>Erstellt für den BNE-Lerntag an der Alice-Salomon Schule in Hannover am 1. Oktober 2024 von 
+            <a href="https://ebildungslabor.de">Nele Hirsch (ebildungslabor)</a> • Lizenz: 
+            <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de">CC0 1.0</a>
+        </small>
+    </footer>
+
+</body>
+
+</html>
